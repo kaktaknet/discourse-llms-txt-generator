@@ -1,0 +1,37 @@
+<%- if SiteSetting.llms_txt_enabled %>
+
+# LLM Documentation Files
+<%- if SiteSetting.llms_txt_allow_indexing %>
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /sitemaps.txt
+Allow: /c/*/llms.txt
+Allow: /t/*/llms.txt
+Allow: /tag/*/llms.txt
+
+Sitemap: <%= Discourse.base_url %>/sitemaps.txt
+<%- else %>
+Disallow: /llms.txt
+Disallow: /llms-full.txt
+Disallow: /sitemaps.txt
+Disallow: /c/*/llms.txt
+Disallow: /t/*/llms.txt
+Disallow: /tag/*/llms.txt
+<%- end %>
+
+<%- if SiteSetting.llms_txt_blocked_user_agents.present? %>
+<%- blocked_agents = SiteSetting.llms_txt_blocked_user_agents.split(',').map(&:strip).reject(&:empty?) %>
+<%- if blocked_agents.any? %>
+# Blocked bots for llms.txt files
+<%- blocked_agents.each do |agent| %>
+User-agent: <%= agent %>
+Disallow: /llms.txt
+Disallow: /llms-full.txt
+Disallow: /sitemaps.txt
+Disallow: /c/*/llms.txt
+Disallow: /t/*/llms.txt
+Disallow: /tag/*/llms.txt
+<%- end %>
+<%- end %>
+<%- end %>
+<%- end %>

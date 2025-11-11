@@ -1,0 +1,21 @@
+en:
+  site_settings:
+    llms_txt_enabled: "Enable llms.txt Generator"
+    llms_txt_allow_indexing: "Allow AI/LLM indexing"
+    llms_txt_blocked_user_agents: "Blocked User-Agents for llms.txt"
+    llms_txt_intro_text: "Introduction text"
+    llms_txt_full_description: "Forum description for llms-full.txt"
+    llms_txt_min_views: "Minimum topic views"
+    llms_txt_posts_limit: "Topics limit"
+    llms_txt_include_excerpts: "Include post excerpts in llms-full.txt"
+    llms_txt_cache_minutes: "Cache duration (minutes)"
+    llms_txt_latest_topics_count: "Latest topics count"
+    llms_txt_post_excerpt_length: "Post excerpt length (characters)"
+
+  discourse_llms_txt:
+    errors:
+      disabled: "llms.txt generator is disabled"
+      indexing_not_allowed: "Indexing is not allowed"
+    info:
+      generated: "llms.txt file generated successfully"
+      cache_cleared: "Cache cleared successfully"

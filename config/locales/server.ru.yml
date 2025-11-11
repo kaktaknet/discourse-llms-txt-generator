@@ -1,0 +1,21 @@
+ru:
+  site_settings:
+    llms_txt_enabled: "Включить генератор llms.txt"
+    llms_txt_allow_indexing: "Разрешить индексацию AI/LLM"
+    llms_txt_blocked_user_agents: "Заблокированные User-Agents для llms.txt"
+    llms_txt_intro_text: "Вступительный текст"
+    llms_txt_full_description: "Описание форума для llms-full.txt"
+    llms_txt_min_views: "Минимум просмотров темы"
+    llms_txt_posts_limit: "Лимит тем"
+    llms_txt_include_excerpts: "Включить выдержки из постов в llms-full.txt"
+    llms_txt_cache_minutes: "Длительность кеша (минуты)"
+    llms_txt_latest_topics_count: "Количество последних тем"
+    llms_txt_post_excerpt_length: "Длина выдержки поста (символов)"
+
+  discourse_llms_txt:
+    errors:
+      disabled: "Генератор llms.txt отключен"
+      indexing_not_allowed: "Индексация не разрешена"
+    info:
+      generated: "Файл llms.txt успешно сгенерирован"
+      cache_cleared: "Кеш успешно очищен"

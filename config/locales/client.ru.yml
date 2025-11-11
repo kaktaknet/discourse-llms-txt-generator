@@ -1,0 +1,9 @@
+ru:
+  js:
+    discourse_llms_txt:
+      title: "Генератор llms.txt"
+      description: "Автоматически генерирует llms.txt и llms-full.txt для оптимизации под LLM"
+      navigation:
+        title: "Документация для LLM"
+        llms_txt: "llms.txt (навигация)"
+        llms_full_txt: "llms-full.txt (полное содержимое)"

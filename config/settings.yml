@@ -1,0 +1,65 @@
+plugins:
+  llms_txt_enabled:
+    default: true
+    client: true
+    description: "Enable llms.txt and llms-full.txt generation for LLM optimization"
+
+  llms_txt_allow_indexing:
+    default: true
+    description: "Allow AI crawlers to index llms.txt files (affects robots.txt and sitemap.xml)"
+
+  llms_txt_blocked_user_agents:
+    default: ""
+    type: string
+    description: "Comma-separated list of User-Agent bots to block from indexing llms.txt files (e.g., 'Omgilibot, ChatGPT-User'). These bots will be blocked from llms.txt files only, but can still access the forum. Leave empty to allow all bots."
+
+  llms_txt_intro_text:
+    default: "This forum provides discussions, support, and knowledge sharing for our community."
+    type: string
+    textarea: true
+    description: "Introduction text for llms.txt file"
+
+  llms_txt_full_description:
+    default: ""
+    type: string
+    textarea: true
+    description: "Additional forum description for llms-full.txt (appears at the top). Write important information describing your forum here. Do NOT write marketing texts, promotional campaigns, or false information - this works poorly with LLMs. This field is optional."
+
+  llms_txt_min_views:
+    default: 50
+    min: 0
+    max: 10000
+    description: "Minimum views required for topics to be included in llms-full.txt"
+
+  llms_txt_posts_limit:
+    default: "medium"
+    type: enum
+    choices:
+      - small
+      - medium
+      - large
+      - all
+    description: "Maximum number of topics in llms-full.txt (small=500, medium=2500, large=5000, all=unlimited)"
+    refresh: true
+
+  llms_txt_include_excerpts:
+    default: false
+    description: "Include post excerpts in llms-full.txt topic list (increases server load and file size). WARNING: Combining with 'all' posts limit may cause performance issues!"
+
+  llms_txt_cache_minutes:
+    default: 60
+    min: 1
+    max: 1440
+    description: "Cache duration in minutes for llms.txt navigation file"
+
+  llms_txt_latest_topics_count:
+    default: 50
+    min: 10
+    max: 100
+    description: "Number of latest topics to display in llms.txt (maximum 50 recommended)"
+
+  llms_txt_post_excerpt_length:
+    default: 500
+    min: 100
+    max: 5000
+    description: "Maximum character length for post excerpts in llms-full.txt"
